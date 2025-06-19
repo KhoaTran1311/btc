@@ -7,7 +7,7 @@ links[cryptocompare]="https://min-api.cryptocompare.com/data/v2/histominute?fsym
 
 for key in "${!links[@]}"; do
 	echo "Crawling $key"
-	mkdir -p /home/k/Developers/btc/$key
+	mkdir -p /home/k/Developers/btc/data/$key
 	value="${links[$key]}"
-	curl -s $value >> "/home/k/Developers/btc/$key/$filename"
+	curl -s $value >> "/home/k/Developers/btc/data/$key/$filename"
 done
